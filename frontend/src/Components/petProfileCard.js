@@ -1,8 +1,9 @@
 import React from "react";
+import './PetProfileList.css';
 
-const petProfileCard = props => {
+const PetProfileCard = props => {
     return (
-      <section className="profile">
+      <section className="profile" display={props.adopted ? ("none") : ("inline-block")}>
         <h3>{props.name}</h3>
         <p>{props.breed}</p>
         <p>{props.status}</p>
@@ -12,4 +13,4 @@ const petProfileCard = props => {
     );
   };
   
-  export default petProfileCard;
+  export default PetProfileCard;
