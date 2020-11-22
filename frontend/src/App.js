@@ -2,8 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import About from "./Components/About"
-import Nav from "./Components/Nav";
-import PetProfileList from "./Components/PetProfileList";
+// import Nav from "./Components/Nav";
+// import PetProfileList from "./Components/PetProfileList";
 // import './Components/PetProfileList.css';
 import {
     BrowserRouter as Router,

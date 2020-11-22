@@ -21,8 +21,8 @@ const Nav = () => {
     return (
         <nav>
             <h1>Benji's animal shelter</h1>
-            <ul className="navLinks">
-                <li>
+            <ul className="navLinks" >
+                <li style={{listStyleType: "none" }}>
                 {navItems.map((navItem, idx) => {
                     return(
                         <Link to={navItem.link} key={navItem.text + idx} >{navItem.text}</Link>
