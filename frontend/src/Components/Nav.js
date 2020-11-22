@@ -1,13 +1,18 @@
 import React from "react";
 import './PetProfileList.css';
+import AdoptAPet from "./AdoptAPet";
+import About from "./About";
+import { BrowserRouter as 
+    Link
+  } from "react-router-dom";
 
 const navItems = [
     {
-        link: "#",
+        link: "/about",
         text: "About"
     },
     {
-        link: "#",
+        link: "/adoptapet",
         text: "Adopt a pet"
     }
 ]
@@ -16,14 +21,15 @@ const Nav = () => {
     return (
         <nav>
             <h1>Benji's animal shelter</h1>
-            <div className="navLinks">
+            <ul className="navLinks">
+                <li>
                 {navItems.map((navItem, idx) => {
-                    return (
-                        <a key={navItem.text + idx} href={navItem.link}>{
-                            navItem.text}</a>
+                    return(
+                        <Link to={navItem.link} key={navItem.text + idx} >{navItem.text}</Link>
                     )
                 })}
-            </div>
+                </li>
+            </ul>
         </nav>
     );
 };

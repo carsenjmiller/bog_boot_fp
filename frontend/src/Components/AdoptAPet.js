@@ -1,17 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import About from "./Components/About"
-import Nav from "./Components/Nav";
-import PetProfileList from "./Components/PetProfileList";
+import Nav from "./Nav";
+import PetProfileList from "./PetProfileList";
 // import './Components/PetProfileList.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-import AdoptAPet from './Components/AdoptAPet';
 
 const props = [
 	{
@@ -92,27 +82,16 @@ const props = [
 
 // console.log(props[0]);
 
-function App() {
+function AdoptAPet() {
   return (
-	  <Router>
-		{/* <div >
-		<Nav />
-		<main>
-			<PetProfileList contents={props[0]} />
-			<PetProfileList contents={props[1]} /> 
-		</main>
-		</div>        */}
-		<AdoptAPet />
-		<Switch>
-			<Route path="/about">
-				<About />
-			</Route>
-			<Route path="/adoptapet">
-				<AdoptAPet />
-			</Route>
-		</Switch>
-	</Router>
+    <div >
+      <Nav />
+	  <main>
+		<PetProfileList contents={props[0]} />
+		<PetProfileList contents={props[1]} /> 
+	  </main>
+    </div>
   );
 }
 
-export default App;
+export default AdoptAPet;
