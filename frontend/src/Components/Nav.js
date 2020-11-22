@@ -3,7 +3,7 @@ import './PetProfileList.css';
 
 const navItems = [
     {
-        link: "#",
+        link: ".Components/About.js",
         text: "About"
     },
     {
