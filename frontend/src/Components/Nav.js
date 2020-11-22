@@ -1,13 +1,28 @@
 import React from "react";
 import './PetProfileList.css';
 
+const navItems = [
+    {
+        link: "#",
+        text: "About"
+    },
+    {
+        link: "#",
+        text: "Adopt a pet"
+    }
+]
+
 const Nav = () => {
     return (
         <nav>
             <h1>Benji's animal shelter</h1>
             <div className="navLinks">
-                <a href="#">About&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="#">Adopt a pet</a>
+                {navItems.map((navItem, idx) => {
+                    return (
+                        <a key={navItem.text + idx} href={navItem.link}>{
+                            navItem.text}</a>
+                    )
+                })}
             </div>
         </nav>
     );

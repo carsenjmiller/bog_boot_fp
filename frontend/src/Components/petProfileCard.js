@@ -4,20 +4,20 @@ import './PetProfileList.css';
 const PetProfileCard = props => {
   // const [myImage, setMyImage] = React.useState("#");
   
-  // const setMyImage2 = (newImage) => {
-  //   setMyImage(newImage);
-  //   console.log(myImage);
-  // };
+  // // const setMyImage2 = (newImage) => {
+  // //   setMyImage(newImage);
+  // //   // console.log(myImage);
+  // // };
 
   // React.useEffect(() => {
   //   fetch("https://picsum.photos/350/200")
-  //     .then(response => response.json())
-  //     .then(data => setMyImage2(data))
+  //     .then(response => response.blob())
+  //     .then(data => setMyImage(data))
   //     .catch(error => console.error(error))
   // },[])
 
   return (
-    <section className="profile" display={props.adopted ? ("none") : ("inline-block")}>
+    <section className="profile" display={props.adopted ? "none" : "inline-block"}>
       <img src="https://picsum.photos/350/200" id="profileImage"></img>
       <div>
         <div>
