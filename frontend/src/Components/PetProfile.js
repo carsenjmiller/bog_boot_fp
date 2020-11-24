@@ -14,7 +14,7 @@ const PetProfile = (pet) => {
           <h2>{pet.name}</h2>
           <p>{pet.breed}</p>
           <p>{pet.status}</p>
-          <p>{pet.gender}, {pet.age} years old</p>
+          <p>{pet.gender}, {pet.yearsOld} years old</p>
 
         </div>
         <Link to={"/" + pet.name + '-' + pet.type} style={{ textDecoration: 'none' }}>
