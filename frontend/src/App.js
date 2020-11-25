@@ -11,7 +11,8 @@ import {
   Switch,
   Route,
   Link,
-  useParams
+  useParams,
+  Redirect
 } from "react-router-dom";
 
 function App() {
@@ -20,18 +21,21 @@ function App() {
       <div className="main">
         <Nav />
         <Switch>
+          <Route exact path="/">
+            <Redirect to="/adoptapet" />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/adoptapet">
-            <AdoptAPet content={FakeData}/>
+            <AdoptAPet content={FakeData} />
           </Route>
           <Route path="/:id" children={<Child />} />
         </Switch>
 
       </div>
     </Router>
-    
+
   )
 }
 
@@ -52,21 +56,21 @@ function Child() {
   // }, [])
 
   return (
-    <PetAbout 
-      type={ids[1]} 
+    <PetAbout
+      type={ids[1]}
       name={ids[0]}
       breed={"American pit bull cross"}
       status={"Neutered and vaccinated"}
       gender={"Female"}
       yearsOld={7}
-      adopted= {false}
-      // type={type.species._id}
-      // breed={pet.breed}
-      // status={pet.status}
-      // gender={pet.gender}
-      // yearsOld={pet.yearsOld}
-      // adopted={pet.adopted}
-      // type={type.species._id}
+      adopted={false}
+    // type={type.species._id}
+    // breed={pet.breed}
+    // status={pet.status}
+    // gender={pet.gender}
+    // yearsOld={pet.yearsOld}
+    // adopted={pet.adopted}
+    // type={type.species._id}
     />
   );
 }

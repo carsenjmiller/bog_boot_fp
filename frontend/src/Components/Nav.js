@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import { 
-    Link
+    NavLink
   } from 'react-router-dom';
 
 const navItems = [
@@ -22,7 +22,8 @@ const Nav = () => {
             <div className="navLinks" >
                 {navItems.map((navItem, idx) => {
                     return(
-                        <Link to={navItem.link} key={navItem.text + idx} ><button>{navItem.text}</button></Link>
+                        <NavLink to={navItem.link} key={navItem.text + idx} ><button>{navItem.text}</button></NavLink>
+                        // <NavLink to={navItem.link} key={navItem.text + idx} >{navItem.text}</NavLink>
                     )
                 })}
             </div>
