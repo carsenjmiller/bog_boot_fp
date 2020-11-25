@@ -20,18 +20,22 @@ function App() {
     <Router>
       <div className="main">
         <Nav />
-        <Switch>
-          <Route exact path="/">
-            <Redirect to="/adoptapet" />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/adoptapet">
-            <AdoptAPet content={FakeData} />
-          </Route>
-          <Route path="/:id" children={<Child />} />
-        </Switch>
+        <div className="topMargin">
+          <Switch>
+            <Route exact path="/">
+              <Redirect to="/adoptapet" />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/adoptapet">
+              <AdoptAPet content={FakeData} />
+            </Route>
+            <Route path="/:id" children={<Child />} />
+          </Switch>
+
+        </div>
+
 
       </div>
     </Router>
