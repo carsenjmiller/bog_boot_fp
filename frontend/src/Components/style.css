@@ -125,7 +125,7 @@ div .headerPhoto {
     margin-top:10%;
 }
 .dogs {
-    display: flex;
+    margin-left: 21px;
     justify-content: center;
     /* margin-left: 21px; */
 }
@@ -143,10 +143,10 @@ div .headerPhoto {
 
 /*Adopt a Pet*/
 .petCards {
-    display: center;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    /* margin-left: 200px; */
+    flex-direction: column;
+    width: 100%;
 }
 
 /*Pet About*/
