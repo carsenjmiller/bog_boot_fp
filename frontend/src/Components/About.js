@@ -3,8 +3,8 @@ import './style.css';
 
 const About = () => {
     return (
-        <div>
-            <div class='headerPhoto'>
+        <div className="about">
+            <div className='headerPhoto'>
                 <img src={"https://picsum.photos/970/250"} ></img>
             </div>
             <div className="body">

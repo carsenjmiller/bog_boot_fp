@@ -50,6 +50,14 @@ nav button:active{
 }
 
 /* About */
+.about{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
 div .body {
     color: black;
     background-color:white;
@@ -58,7 +66,8 @@ div .body {
     width: 800px;
     /* width: 100%; */
     margin-top: 20px;
-    margin-left: 250px;
+    /* margin-left: 250px; */
+    justify-content: center;
     padding: 50px;
     
   }
@@ -126,8 +135,8 @@ div .headerPhoto {
     flex-wrap: wrap;
     width: 75%;
     height: auto;
-    margin: 5%;
-    margin-top:10%;
+    /* margin: 5%; */
+    margin-top:7%;
 }
 .dogs {
     margin-left: 21px;
@@ -155,6 +164,19 @@ div .headerPhoto {
 }
 
 /*Pet About*/
+div .bodyPet {
+    color: black;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    /* width: 100%; */
+    margin-top: 70px;
+    /* margin-left: 250px; */
+    justify-content: center;
+    padding: 50px;
+    
+  }
 #adoptButton {
     background-color:rgb(20, 146, 230);
     color: white;
