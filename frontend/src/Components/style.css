@@ -132,7 +132,7 @@ div .headerPhoto {
 #Pets{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
 }
 #profileImage{
     max-width: 105%;
