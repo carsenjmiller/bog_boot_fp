@@ -56,7 +56,8 @@ div .body {
     display: flex;
     flex-direction: column;
     width: 800px;
-    margin-top: 150px;
+    /* width: 100%; */
+    margin-top: 20px;
     margin-left: 250px;
     padding: 50px;
     
@@ -68,10 +69,14 @@ div .body {
 }
 
 div .headerPhoto {
-    display: flex;
+    /* display: flex;
     flex-direction: start;
-    align-content: stretch;
-    width: 100px;
+    align-content: stretch; */
+    width: 100%;
+    height: auto;
+}
+.headerPhoto img{
+    width: 100%;
     height: auto;
 }
 
