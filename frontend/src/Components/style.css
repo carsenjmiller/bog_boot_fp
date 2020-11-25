@@ -62,6 +62,14 @@ div .body {
     flex-direction: column;
 }
 
+div .headerPhoto {
+    display: flex;
+    flex-direction: start;
+    align-content: stretch;
+    width: 100px;
+    height: auto;
+}
+
 
 
 /* PetProfile */
@@ -121,3 +129,27 @@ div .body {
     height: auto;
     padding: 0%;
 }
+
+/*Pet About*/
+#adoptButton {
+    background-color:rgb(20, 146, 230);
+    color: white;
+    margin: 1px;
+    padding: 13px;
+    border: 40px;
+    width: 100px;
+    border-radius: 25px;
+}
+
+.petInfo {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    
+}
+
+/* .petInfoWords {
+    
+} */
+

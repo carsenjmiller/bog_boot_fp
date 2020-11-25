@@ -1,6 +1,13 @@
 import React from 'react';
 import './style.css';
 
+const Image = () => {
+    return (
+        <div class='headerPhoto'>
+            <img src={"https://picsum.photos/350/200"}  ></img>
+        </div>
+    );
+}
 
 const About = () => {
     return (
