@@ -118,7 +118,11 @@ div .headerPhoto {
     height: auto;
     margin: 5%;
     margin-top:10%;
-} 
+}
+.dogs {
+    margin-left: 21px;
+}
+
 #Pets{
     display: flex;
     flex-direction: row;
@@ -128,6 +132,11 @@ div .headerPhoto {
     max-width: 105%;
     height: auto;
     padding: 0%;
+}
+
+/*Adopt a Pet*/
+.petCards {
+    margin-left: 200px;
 }
 
 /*Pet About*/
