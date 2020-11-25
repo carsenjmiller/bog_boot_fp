@@ -43,6 +43,10 @@ nav button:hover{
     font-weight: bold;
 }
 
+nav button:active{
+    color: white;
+    font-weight: bold;
+}
 
 /* About */
 div .body {
