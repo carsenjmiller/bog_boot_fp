@@ -15,6 +15,7 @@ nav{
     top: 0;
     margin-bottom: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    justify-content: space-between;
 }
 nav h1{
     border-left:5%;
@@ -125,12 +126,13 @@ div .headerPhoto {
 }
 .dogs {
     margin-left: 21px;
+    justify-content: center;
 }
 
 #Pets{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 #profileImage{
     max-width: 105%;
@@ -140,7 +142,10 @@ div .headerPhoto {
 
 /*Adopt a Pet*/
 .petCards {
-    margin-left: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 /*Pet About*/
@@ -158,11 +163,12 @@ div .headerPhoto {
     display: flex;
     flex-direction: row;
     /* justify-content: space-evenly; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* margin-left: */
     
 }
 
-/* .petInfoWords {
-    
-} */
+.petInfoWords {
+    margin-left: 20px;
+}
 
