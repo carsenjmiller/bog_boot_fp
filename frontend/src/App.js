@@ -5,6 +5,10 @@ import About from './Components/About'
 import AdoptAPet from './Components/AdoptAPet'
 import FakeData from './Components/FakeData'
 import PetAbout from './Components/PetAbout'
+import Pets from '../../backend/pets.json'
+import PetsInfo from '../../backend/db'
+import Index from '../../backend/routes/index'
+
 import {
   BrowserRouter as Router,
   Switch,
