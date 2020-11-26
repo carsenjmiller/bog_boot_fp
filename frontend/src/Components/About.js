@@ -1,19 +1,24 @@
-import React, {Component} from 'react';
-import './aboutPage.css';
-// import Nav from "./Nav";
+import React from 'react';
+import './style.css';
 
-export default class About extends Component {
-    render() {
-        return (
-            <div>
+const About = () => {
+    return (
+        <div className="about">
+            <div className='headerPhoto'>
+                <img src={"https://picsum.photos/970/250"} ></img>
+            </div>
+            <div className="body">
+                {/* <div class='headerPhoto'>
+                <img src={"https://picsum.photos/350/200"} ></img>
+            </div> */}
                 <div>
                     <h2>Our Mission</h2>
                     <p>
-                        Our mission is to advocate for animals by providing safety until a home placement of those in our care. 
+                        Our mission is to advocate for animals by providing safety until a home placement of those in our care.
                         We promote spay and nueter programs as a means to control pet overpoulation.
                     </p>
                 </div>
-            
+
                 <div>
                     <h2>Wish List</h2>
                     <p>
@@ -22,7 +27,7 @@ export default class About extends Component {
                         us from Amazon. Check out our wish list!
                     </p>
                 </div>
-            
+
                 <div>
                     <h2>Volunteer</h2>
                     <p>
@@ -31,19 +36,22 @@ export default class About extends Component {
                         of our available positions at QAS.
                     </p>
                 </div>
-            
+
                 <div>
                     <h2>Adoption Hours</h2>
                     <p>
-                        <ul style="list-style-type:none;">
+                        <ul style={{ listStyleType: "none" }}>
                             <li><b>Tuesday-</b> 6-9PM</li>
                             <li><b>Thursday-</b> 6-8PM</li>
-                            <li><b>Saturday-</b> 10AM-4PM</li>  
+                            <li><b>Saturday-</b> 10AM-4PM</li>
                         </ul>
                     </p>
                 </div>
             </div>
-        )
-    }
+
+        </div>
+
+    )
 }
 
+export default About;

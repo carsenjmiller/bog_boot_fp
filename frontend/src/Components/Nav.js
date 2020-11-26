@@ -1,10 +1,8 @@
-import React from "react";
-import './PetProfileList.css';
-import AdoptAPet from "./AdoptAPet";
-import About from "./About";
-import { BrowserRouter as 
-    Link
-  } from "react-router-dom";
+import React from 'react';
+import './style.css';
+import { 
+    NavLink
+  } from 'react-router-dom';
 
 const navItems = [
     {
@@ -21,17 +19,16 @@ const Nav = () => {
     return (
         <nav>
             <h1>Benji's animal shelter</h1>
-            <ul className="navLinks" >
-                <li style={{listStyleType: "none" }}>
+            <div className="navLinks" >
                 {navItems.map((navItem, idx) => {
                     return(
-                        <Link to={navItem.link} key={navItem.text + idx} >{navItem.text}</Link>
+                        <NavLink to={navItem.link} key={navItem.text + idx} ><button>{navItem.text}</button></NavLink>
+                        // <NavLink to={navItem.link} key={navItem.text + idx} >{navItem.text}</NavLink>
                     )
                 })}
-                </li>
-            </ul>
+            </div>
         </nav>
-    );
-};
+    )
+}
 
 export default Nav;
