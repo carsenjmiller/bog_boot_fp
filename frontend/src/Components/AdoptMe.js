@@ -8,6 +8,7 @@ const AdoptMe = (props) => {
     function handleClick() {
         history.push("/");
         props.updateAdoption(props.petInfo);
+        
     }
 
     return (
