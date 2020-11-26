@@ -161,6 +161,7 @@ div .headerPhoto {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 #profileImage{
     max-width: 105%;
