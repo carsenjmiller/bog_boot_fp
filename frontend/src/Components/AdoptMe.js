@@ -6,8 +6,8 @@ const AdoptMe = (props) => {
     let history = useHistory();
 
     function handleClick() {
-        history.push("/adoptapet");
-        props.updateAdoption(props.petInfo)
+        history.push("/");
+        props.updateAdoption(props.petInfo);
     }
 
     return (

@@ -17,14 +17,17 @@ const PetProfile = (pet) => {
         <div>
           
           <h2>{pet.name}</h2>
-          <p><FontAwesomeIcon icon={faDog} /> {pet.breed}</p>
-          <p><FontAwesomeIcon icon={faSyringe} /> {pet.status}</p>
-          <p><FontAwesomeIcon icon={faInfoCircle} /> {pet.gender}, {pet.yearsOld} years old</p>
-
-        </div>
-        <Link to={"/" + pet.name + '-' + pet.type} style={{ textDecoration: 'none' }}>
+          <p className="desc"><FontAwesomeIcon icon={faDog} /> {pet.breed}</p>
+          <p className="desc"><FontAwesomeIcon icon={faSyringe} /> {pet.status}</p>
+          <p className="desc"><FontAwesomeIcon icon={faInfoCircle} /> {pet.gender}, {pet.yearsOld} years old</p>
+          <Link id="moreDetails" to={"/" + pet.name + '-' + pet.type} style={{ textDecoration: 'none' }}>
           <button >View more details   <FontAwesomeIcon icon={faArrowDown} /></button>
         </Link>
+
+        </div>
+        {/* <Link id="moreDetails" to={"/" + pet.name + '-' + pet.type} style={{ textDecoration: 'none' }}>
+          <button >View more details   <FontAwesomeIcon icon={faArrowDown} /></button>
+        </Link> */}
       </div>
     </section>
   )

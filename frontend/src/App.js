@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React from 'react'
 import './App.css';
 import Nav from './Components/Nav'
@@ -10,19 +9,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   useParams,
   Redirect
 } from "react-router-dom";
-
-// const [currentPets, setCurrentPets] = React.useState(FakeData)
-// const updateAdoption = (props) => {
-//   currentPets[props.typeIndex].pets[props.petIndex].adopted = true
-//   setCurrentPets(currentPets)
-// }
-// import { useHistory } from "react-router-dom";
-
-
 
   function App() {
     const [currentPets, setCurrentPets] = React.useState(FakeData)
@@ -81,13 +70,6 @@ import {
 
     return (
       <PetAbout
-        // type={ids[1]}
-        // name={ids[0]}
-        // breed={"American pit bull cross"}
-        // status={"Neutered and vaccinated"}
-        // gender={"Female"}
-        // yearsOld={7}
-        // adopted={false}
         typeIndex={type}
         petIndex={pet}
         type={props.currentPets[type]._id}

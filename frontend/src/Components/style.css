@@ -98,8 +98,9 @@ div .headerPhoto {
     border-width: 1px;
     border-radius: 7px;
     margin: 2%;
-    width: 250px;
-    height: 385px;
+    width: 270px;
+    height: 430px;
+    /* height: auto; */
     overflow: hidden;
  
 }
@@ -107,9 +108,12 @@ div .headerPhoto {
     display: none;
 }
 .profile div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
     border-left: 2%;
     border-right: 3%;
 }
@@ -126,6 +130,14 @@ div .headerPhoto {
     margin: 2%;
     padding: 2%; */
 }
+#moreDetails {
+    display: flex;
+    align-self: center;
+}
+.desc p{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
 
 /* PetProfileList */
 .petList{
@@ -133,7 +145,7 @@ div .headerPhoto {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    width: 60%; 
+    width: 65%; 
     /* width: 83%; */
     height: auto;
     /* margin: 5%; */
@@ -199,5 +211,6 @@ div .bodyPet {
 
 .petInfoWords {
     margin-left: 20px;
+    font-size: x-large;
 }
 
