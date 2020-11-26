@@ -1,5 +1,29 @@
 import React from 'react';
 import './style.css';
+import {
+    BrowserRouter as 
+    Link
+  } from "react-router-dom";
+
+// import { useHistory } from "react-router-dom";
+
+// function AdoptMeButton(petInfo) {
+//   let history = useHistory();
+
+//   function handleClick() {
+//     history.push("/adoptapet");
+//   }
+
+//   return (
+//     // <button type="button" onClick={handleClick}>
+//     //   Go home
+//     // </button>
+//     <button onClick={() => 
+//         petInfo.Info.updateAdoption(petInfo.Info), 
+//         handleClick
+//     } id="adoptButton" >ADOPT ME!</button>
+//   );
+// }
 
 const PetAbout = (petInfo) => {
     return (
@@ -42,7 +66,9 @@ const PetAbout = (petInfo) => {
 
                     <p>Certe, nisi voluptatem tanti aestimaretis. Quid ergo attinet gloriose loqui, nisi constanter loquare? Tollenda est atque extrahenda radicitus. Prioris generis est docilitas, memoria; Summae mihi videtur inscitiae. </p>
                 </div>
-                <button id="adoptButton">ADOPT ME!</button>
+                <Link to="/adoptapet" ><button id="adoptButton" onClick={() => petInfo.updateAdoption(petInfo)}>ADOPT ME!</button></Link>
+                {/* <button id="adoptButton" onClick={() => petInfo.updateAdoption(petInfo)}>ADOPT ME!</button> */}
+                {/* <AdoptMeButton Info={petInfo}/> */}
             </div>
 
         </div>
