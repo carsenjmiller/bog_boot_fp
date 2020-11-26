@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import AdoptMe from './AdoptMe'
 import {
     BrowserRouter as 
     Link
@@ -66,9 +67,9 @@ const PetAbout = (petInfo) => {
 
                     <p>Certe, nisi voluptatem tanti aestimaretis. Quid ergo attinet gloriose loqui, nisi constanter loquare? Tollenda est atque extrahenda radicitus. Prioris generis est docilitas, memoria; Summae mihi videtur inscitiae. </p>
                 </div>
-                <Link to="/adoptapet" ><button id="adoptButton" onClick={() => petInfo.updateAdoption(petInfo)}>ADOPT ME!</button></Link>
+                {/* <Link to="/adoptapet" ><button id="adoptButton" onClick={() => petInfo.updateAdoption(petInfo)}>ADOPT ME!</button></Link> */}
                 {/* <button id="adoptButton" onClick={() => petInfo.updateAdoption(petInfo)}>ADOPT ME!</button> */}
-                {/* <AdoptMeButton Info={petInfo}/> */}
+                <AdoptMe petInfo={petInfo} currentPets={petInfo.currentPets} updateAdoption={petInfo.updateAdoption}/>
             </div>
 
         </div>

@@ -27,15 +27,9 @@ import {
   function App() {
     const [currentPets, setCurrentPets] = React.useState(FakeData)
     const updateAdoption = (props) => {
-      // let history = useHistory();
-
-      // function handleClick() {
-      //   history.push("/adoptapet");
-      // }
+ 
       currentPets[props.typeIndex].pets[props.petIndex].adopted = true
       setCurrentPets(currentPets)
-      // adoptMeButton()
-      // history.push("/adoptapet");
     }
     return (
       <Router>
@@ -104,6 +98,7 @@ import {
         yearsOld={props.currentPets[type].pets[pet].yearsOld}
         adopted={props.currentPets[type].pets[pet].adopted}
         updateAdoption={props.updateAdoption}
+        petInfo={props.currentPets}
       />
     );
   }
