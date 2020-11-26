@@ -1,30 +1,8 @@
 import React from 'react';
 import './style.css';
 import AdoptMe from './AdoptMe'
-import {
-    BrowserRouter as 
-    Link
-  } from "react-router-dom";
-
-// import { useHistory } from "react-router-dom";
-
-// function AdoptMeButton(petInfo) {
-//   let history = useHistory();
-
-//   function handleClick() {
-//     history.push("/adoptapet");
-//   }
-
-//   return (
-//     // <button type="button" onClick={handleClick}>
-//     //   Go home
-//     // </button>
-//     <button onClick={() => 
-//         petInfo.Info.updateAdoption(petInfo.Info), 
-//         handleClick
-//     } id="adoptButton" >ADOPT ME!</button>
-//   );
-// }
+import { faDog, faSyringe, faInfoCircle, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PetAbout = (petInfo) => {
     return (
@@ -34,12 +12,11 @@ const PetAbout = (petInfo) => {
                 <div className="petInfo">
                     <img src="https://picsum.photos/350/200" id="profileImage" alt={"Picture of " + petInfo.name}></img>
                     <div className="petInfoWords">
-                        <p>{petInfo.breed}</p>
-                        <p>{petInfo.status}</p>
-                        <p>{petInfo.gender}, {petInfo.age} years old</p>
+                        <p><FontAwesomeIcon icon={faDog} /> {petInfo.breed}</p>
+                        <p><FontAwesomeIcon icon={faSyringe} /> {petInfo.status}</p>
+                        <p><FontAwesomeIcon icon={faInfoCircle} /> {petInfo.gender}, {petInfo.age} years old</p>
                     </div>
                 </div>
-                {/* <p>{petInfo.description}</p> */}
                 <div>
                     <h1>Ut proverbia non nulla veriora sint quam vestra dogmata.</h1>
 
@@ -67,13 +44,9 @@ const PetAbout = (petInfo) => {
 
                     <p>Certe, nisi voluptatem tanti aestimaretis. Quid ergo attinet gloriose loqui, nisi constanter loquare? Tollenda est atque extrahenda radicitus. Prioris generis est docilitas, memoria; Summae mihi videtur inscitiae. </p>
                 </div>
-                {/* <Link to="/adoptapet" ><button id="adoptButton" onClick={() => petInfo.updateAdoption(petInfo)}>ADOPT ME!</button></Link> */}
-                {/* <button id="adoptButton" onClick={() => petInfo.updateAdoption(petInfo)}>ADOPT ME!</button> */}
                 <AdoptMe petInfo={petInfo} currentPets={petInfo.currentPets} updateAdoption={petInfo.updateAdoption}/>
             </div>
-
         </div>
-
     )
 }
 
