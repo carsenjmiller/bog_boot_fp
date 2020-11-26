@@ -133,7 +133,8 @@ div .headerPhoto {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    width: 75%;
+    width: 60%; 
+    /* width: 83%; */
     height: auto;
     /* margin: 5%; */
     margin-top:7%;
