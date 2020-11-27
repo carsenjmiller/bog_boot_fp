@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "DEBUG=backend:server node ./bin/www"
-
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
