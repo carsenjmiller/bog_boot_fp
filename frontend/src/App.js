@@ -18,13 +18,14 @@ import {
 } from "react-router-dom";
 
   function App() {
-    // React.useEffect(() => {
-    //   fetch('http://localhost:3001')
-    //     .then(response => response.json())
-    //     .then(data => console.log(data))
-    // }, [])
-
+    
     const [currentPets, setCurrentPets] = React.useState(FakeData)
+    React.useEffect(() => {
+      fetch('http://localhost:3001/pets')
+        .then(response => response.json())
+        .then(data => setCurrentPets(data))
+    }, [])
+    
     const updateAdoption = (props) => {
  
       currentPets[props.typeIndex].pets[props.petIndex].adopted = true
