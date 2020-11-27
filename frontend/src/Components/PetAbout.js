@@ -14,7 +14,7 @@ const PetAbout = (petInfo) => {
                     <div className="petInfoWords">
                         <p><FontAwesomeIcon icon={faDog} /> {petInfo.breed}</p>
                         <p><FontAwesomeIcon icon={faSyringe} /> {petInfo.status}</p>
-                        <p><FontAwesomeIcon icon={faInfoCircle} /> {petInfo.gender}, {petInfo.age} years old</p>
+                        <p><FontAwesomeIcon icon={faInfoCircle} /> {petInfo.gender}, {petInfo.yearsOld} years old</p>
                     </div>
                 </div>
                 <div>
