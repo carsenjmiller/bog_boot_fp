@@ -35,6 +35,3 @@ function petHandler(request, response) {
   response.status(200) //http status code
   response.send() //http response
 }
-
-
-app.listen(3000)
