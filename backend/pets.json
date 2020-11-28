@@ -3,60 +3,66 @@
         "id": 0,
         "name": "Rocky",
         "breed": "American pit bull cross",
-		"status": "Neutered and vaccinated",
-		"gender": "Female",
-		"yearsOld": 7,
+        "status": "Neutered and vaccinated",
+        "gender": "Female",
+        "yearsOld": 7,
         "adopted": false,
-        "species": "dog"
+        "species": "dog",
+        "imgSrc": ""
     },
     {
         "id": 1,
         "name": "Juju",
         "breed": "American staff cross",
-		"status": "Vaccinated, not neutered",
-		"gender": "Male",
-		"yearsOld": 7,
+        "status": "Vaccinated, not neutered",
+        "gender": "Male",
+        "yearsOld": 7,
         "adopted": true,
-        "species": "dog"
+        "species": "dog",
+        "imgSrc": ""
     },
     {
         "id": 2,
         "name": "Knuckles II",
         "breed": "Anatolian Shepherd",
-		"status": "Neutered and vaccinated",
-		"gender": "Male",
-		"yearsOld": 1,
+        "status": "Neutered and vaccinated",
+        "gender": "Male",
+        "yearsOld": 1,
         "adopted": false,
-        "species": "dog"
+        "species": "dog",
+        "imgSrc": ""
     },
     {
         "id": 3,
         "name": "Terry",
         "breed": "Domestic medium hair cross",
-		"status": "Neutered, not vaccinated",
-		"gender": "Male",
-		"yearsOld": 2,
+        "status": "Neutered, not vaccinated",
+        "gender": "Male",
+        "yearsOld": 2,
         "adopted": false,
-        "species": "cat"
+        "species": "cat",
+        "imgSrc": ""
     },
     {
         "id": 4,
         "name": "Chonker",
         "breed": "Main coone",
-		"status": "Status unknown",
-		"gender": "Female",
-		"yearsOld": 5,
+        "status": "Status unknown",
+        "gender": "Female",
+        "yearsOld": 5,
         "adopted": true,
-        "species": "cat"
+        "species": "cat",
+        "imgSrc": ""
     },
     {
         "id": 5,
         "name": "Kip",
         "breed": "Domestic shorthair",
-		"status": "Neutered and vaccinated",
-		"gender": "Female",
-		"yearsOld": 2,
+        "status": "Neutered and vaccinated",
+        "gender": "Female",
+        "yearsOld": 2,
         "adopted": false,
-        "species": "cat"
+        "species": "cat",
+        "imgSrc": ""
     }
 ]
