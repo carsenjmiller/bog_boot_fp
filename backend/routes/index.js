@@ -29,9 +29,3 @@ async function group(client) {
 }
 
 module.exports = router;
-
-function petHandler(request, response) {
-  const name = request.query.name //query parameters
-  response.status(200) //http status code
-  response.send() //http response
-}
