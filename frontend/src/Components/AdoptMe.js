@@ -9,8 +9,10 @@ const AdoptMe = (props) => {
         // history.push("/");
         props.updateAdoption(props.petInfo);
         props.setAdoptMeBTN("Pending Approval")
-        // setTimeout('', 5000);
-        history.push("/");
+        setTimeout(() => {
+            history.push("/")
+        }, 1000);
+        
         
     }
 
