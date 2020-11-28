@@ -8,7 +8,7 @@
         "yearsOld": 7,
         "adopted": false,
         "species": "dog",
-        "imgSrc": ""
+        "imgSrc": "backend/petImgs/Rocky.jpg"
     },
     {
         "id": 1,
@@ -19,7 +19,7 @@
         "yearsOld": 7,
         "adopted": true,
         "species": "dog",
-        "imgSrc": ""
+        "imgSrc": "backend/petImgs/Juju.jpg"
     },
     {
         "id": 2,
@@ -30,7 +30,7 @@
         "yearsOld": 1,
         "adopted": false,
         "species": "dog",
-        "imgSrc": ""
+        "imgSrc": "backend/petImgs/Knuckles.jpg"
     },
     {
         "id": 3,
@@ -41,7 +41,7 @@
         "yearsOld": 2,
         "adopted": false,
         "species": "cat",
-        "imgSrc": ""
+        "imgSrc": "backend/petImgs/Terry.jpg"
     },
     {
         "id": 4,
@@ -52,7 +52,7 @@
         "yearsOld": 5,
         "adopted": true,
         "species": "cat",
-        "imgSrc": ""
+        "imgSrc": "backend/petImgs/Chonker.jpg"
     },
     {
         "id": 5,
@@ -63,6 +63,6 @@
         "yearsOld": 2,
         "adopted": false,
         "species": "cat",
-        "imgSrc": ""
+        "imgSrc": "backend/petImgs/Kip.jpg"
     }
 ]
