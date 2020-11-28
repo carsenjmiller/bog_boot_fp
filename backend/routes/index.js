@@ -103,7 +103,7 @@ async function group(client) {
           pets: {
             $push: {
               id: '$id', name: '$name', breed: '$breed', status:
-                '$status', gender: '$gender', yearsOld: '$yearsOld', adopted: '$adopted'
+                '$status', gender: '$gender', yearsOld: '$yearsOld', adopted: '$adopted', imgSrc: '$imgSrc'
             }
           }
         }
