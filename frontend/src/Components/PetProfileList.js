@@ -20,7 +20,7 @@ const PetProfileList = (type) => {
     return (
         <div className="petList">
 
-            <h1 class="dogs">{(type.species._id === 'dog') ? ("Dogs and Puppies") : ("Cats and Kittens")}</h1>
+            <h1 className="dogs">{(type.species._id === 'dog') ? ("Dogs and Puppies") : ("Cats and Kittens")}</h1>
             <div id="Pets">
                 {Pets}
             </div>

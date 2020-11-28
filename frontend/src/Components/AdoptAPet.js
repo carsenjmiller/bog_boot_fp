@@ -5,7 +5,7 @@ import PetProfileList from './PetProfileList'
 
 const AdoptAPet = (props) => {
     return (
-		<main class= "petCards">
+		<main className= "petCards">
 			<PetProfileList species={props.content[0]} />
 			<PetProfileList species={props.content[1]} /> 
 		</main>

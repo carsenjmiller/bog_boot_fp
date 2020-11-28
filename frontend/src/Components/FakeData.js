@@ -4,7 +4,7 @@ const FakeData = [
         _id: 'dog',
         pets: [
             {
-                name: 'Rocky',
+                name: 'RockyFake',
                 breed: 'American pit bull cross',
                 status: 'Neutered and vaccinated',
                 gender: 'Female',
@@ -12,15 +12,15 @@ const FakeData = [
                 adopted: false,
             },
             {
-                name: 'Juju',
+                name: 'JujuFake',
                 breed: 'American staff cross',
                 status: 'Vaccindated, not neutered',
                 gender: 'Male',
                 yearsOld: 7,
-                adopted: true,
+                adopted: false,
             },
             {
-                name: 'Spot',
+                name: 'SpotFake',
                 breed: 'German Sheppard',
                 status: 'Neutered and vaccinated',
                 gender: 'Female',
@@ -73,7 +73,7 @@ const FakeData = [
         _id: 'cat',
         pets: [
             {
-                name: 'Terry',
+                name: 'TerryFake',
                 breed: 'Domestic medium hair cross',
                 status: 'Neutered, not vaccinated',
                 gender: 'Male',
@@ -81,7 +81,7 @@ const FakeData = [
                 adopted: false,
             },
             {
-                name: 'Chonker',
+                name: 'ChonkerFake',
                 breed: 'Main coone',
                 status: 'Status unknown',
                 gender: 'Female',
