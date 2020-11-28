@@ -5,6 +5,7 @@ import { faDog, faSyringe, faInfoCircle, faArrowDown } from "@fortawesome/free-s
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PetAbout = (petInfo) => {
+    const [adoptMeBTN, setAdoptMeBTN] = React.useState("ADOPT ME!")
     return (
         <div className="about">
             <div className="bodyPet">
@@ -44,7 +45,7 @@ const PetAbout = (petInfo) => {
 
                     <p>Certe, nisi voluptatem tanti aestimaretis. Quid ergo attinet gloriose loqui, nisi constanter loquare? Tollenda est atque extrahenda radicitus. Prioris generis est docilitas, memoria; Summae mihi videtur inscitiae. </p>
                 </div>
-                <AdoptMe petInfo={petInfo} currentPets={petInfo.currentPets} updateAdoption={petInfo.updateAdoption}/>
+                <AdoptMe petInfo={petInfo} currentPets={petInfo.currentPets} updateAdoption={petInfo.updateAdoption} adoptMeBTN={adoptMeBTN} setAdoptMeBTN={setAdoptMeBTN}/>
             </div>
         </div>
     )
