@@ -174,11 +174,16 @@ div .body p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: 950px;
 }
 #profileImage{
-    max-width: 105%;
-    height: auto;
+    /* max-width: 105%; */
+    /* height: auto; */
+    width: 300px;
+    height: 165px;
+    object-fit: cover;
     padding: 0%;
+
 }
 
 /*Adopt a Pet*/

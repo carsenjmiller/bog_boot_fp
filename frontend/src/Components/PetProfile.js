@@ -12,7 +12,8 @@ const PetProfile = (pet) => {
   const status = pet.adopted
   return (
     <section className={status ? "profileHide" : "profile"}>
-      <img src={pet.type === "dog" ? "https://picsum.photos/350/200" : "http://placekitten.com/350/200"} id="profileImage" alt={"Picture of " + pet.name}></img>
+      {/* <img src={pet.type === "dog" ? "https://picsum.photos/350/200" : "http://placekitten.com/350/200"} id="profileImage" alt={"Picture of " + pet.name}></img> */}
+      <img src={pet.imgSrc} id="profileImage" alt={"Picture of " + pet.name}></img>
       <div>
         <div>
           
