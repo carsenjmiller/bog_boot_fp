@@ -23,11 +23,11 @@ router.get('/', function (req, res, next) {
 
 
 // endpoint
-router.get('/findDocuments', function petFind(request, response) {
+router.get('/findDocuments', async function petFind(request, response) {
   const name = request.query.name; //query parameter
 
   // Use connect method to connect to the Server
-  client.connect(function (err) {
+  client.connect(async function (err) {
     if (err) {
       console.log(err);
       return;
@@ -35,7 +35,7 @@ router.get('/findDocuments', function petFind(request, response) {
 
     const db = client.db(dbName);
 
-    var result = findDocuments(db, function () {
+    var result = await findDocuments(db, function () {
       client.close();
     });
 
@@ -47,20 +47,20 @@ router.get('/findDocuments', function petFind(request, response) {
 
 
 // endpoint
-router.patch('/updateDocument', function petUpdate(request, response) {
+router.patch('/updateDocument', async function petUpdate(request, response) {
 
   // Use connect method to connect to the Server
-  client.connect(function (err) {
+  client.connect(async function (err) {
     if (err) {
       console.log(err);
       return;
     }
 
-    const name = request.query.name; //query parameter
+    const name = request.query; //query parameter
 
     const db = client.db(dbName);
 
-    var result = updateDocument(db, name, function () {
+    var result = await updateDocument(db, name, function () {
       client.close();
     });
 
@@ -70,20 +70,19 @@ router.patch('/updateDocument', function petUpdate(request, response) {
 
 });
 
-//endpoint
-router.get('/findOne', function findPet(request, response) {
+router.get('/findOne', async function findPet(request, response) {
 
-  client.connect(function (err) {
+  client.connect(async function (err) {
     if (err) {
       console.log(err);
       return;
     }
 
-    const name = request.query.name; //query parameter
+    const name = request.query; //query parameter
 
     const db = client.db(dbName);
 
-    var result = findOne(db, name, function () {
+    var result = await findOne(db, name, function () {
       client.close();
     });
 
@@ -114,46 +113,74 @@ async function group(client) {
 }
 
 // function
-const findDocuments = function (db, callback) {
-  // Get the documents collection
-  const collection = db.collection('pets');
-  // Find some documents
-  collection.find({}).toArray(function (err, docs) {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log(docs);
-    callback(docs);
-  });
-}
-
-// function
-const updateDocument = function (db, name, callback) {
-  // Get the documents collection
-  const collection = db.collection('pets');
-  // Update document where a is 2, set b equal to 1
-  collection.updateOne({ name: name }
-    , { $set: { adopted: true } }, function (err, result) {
-      // assert.equal(err, null);
-      // assert.equal(1, result.result.n);
+const findDocuments = async function (db, callback) {
+  try {
+    // Get the documents collection
+    const collection = db.collection('pets');
+    // Find some documents
+    const results = await collection.find({}).toArray(function (err, docs) {
       if (err) {
         console.log(err);
         return;
       }
-      console.log("adopted is true");
-      console.log(result);
-      callback(result);
+      console.log(docs);
+      callback(docs);
     });
+    return results;
+  } catch (err) {
+    console.log(err);
+    return false;
+  }
 }
 
-const findOne = function (db, name, callback) {
-  const collection = db.collection('pets');
-
-  var result = collection.findOne({ "name": name });
-  console.log(result);
-  callback(result);
+// function
+const updateDocument = async function (db, name, callback) {
+  try {
+    // Get the documents collection
+    const collection = db.collection('pets');
+    // Update document where a is 2, set b equal to 1
+    const results = await collection.updateOne(name
+       , { $set: {adopted: true}}, function (err, result) {
+        // assert.equal(err, null);
+        // assert.equal(1, result.result.n);
+        if (err) {
+          console.log(err);
+          return;
+        }
+        console.log("adopted is true");
+        console.log(result);
+        callback(result);
+      });
+    return true;
+  } catch (err) {
+    console.log(err);
+    return false;
+  }
+  
 }
-router.use(bodyParser.text());
+
+// const findOne = async function (db, name, callback) {
+//       const collection = db.collection('pets');
+
+//       var result = await collection.findOne({name}).toArray();
+//       console.log(result);
+//       callback(result);
+//       return true;
+// }
+
+const findOne = async function (db, name, callback) {
+  try {
+    const collection = db.collection('pets');
+
+    var result = await collection.find(name).toArray();
+    console.log(result);
+    callback(result);
+    return result;
+  } catch (err) {
+    console.log(err);
+    return false;
+  }
+}
+//router.use(bodyParser.text());
 
 module.exports = router;
