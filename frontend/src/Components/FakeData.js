@@ -36,6 +36,33 @@ const FakeData = [
                 adopted: false,
                 imgSrc: Knuckles,
             },
+            {
+                name: 'Rocky',
+                breed: 'American pit bull cross',
+                status: 'Neutered and vaccinated',
+                gender: 'Female',
+                yearsOld: 7,
+                adopted: false,
+                imgSrc: Rocky,
+            },
+            {
+                name: 'Juju',
+                breed: 'American staff cross',
+                status: 'Vaccindated, not neutered',
+                gender: 'Male',
+                yearsOld: 7,
+                adopted: false,
+                imgSrc: Juju,
+            },
+            {
+                name: "Knuckles II",
+                breed: "Anatolian Shepherd",
+                status: 'Neutered and vaccinated',
+                gender: "Male",
+                yearsOld: 1,
+                adopted: false,
+                imgSrc: Knuckles,
+            },
             // {
             //     name: 'Max',
             //     breed: 'Wheaten Terrier',
@@ -81,6 +108,33 @@ const FakeData = [
     {
         _id: 'cat',
         pets: [
+            {
+                name: 'Terry',
+                breed: 'Domestic medium hair cross',
+                status: 'Neutered, not vaccinated',
+                gender: 'Male',
+                yearsOld: 2,
+                adopted: false,
+                imgSrc: Terry
+            },
+            {
+                name: 'Chonker',
+                breed: 'Main coone',
+                status: 'Status unknown',
+                gender: 'Female',
+                yearsOld: 5,
+                adopted: false,
+                imgSrc: Chonker
+            },
+            {
+                name: "Kip",
+                breed: "Domestic shorthair",
+                status: "Neutered and vaccinated",
+                gender: 'Female',
+                yearsOld: 2,
+                adopted: false,
+                imgSrc: Kip
+            },
             {
                 name: 'Terry',
                 breed: 'Domestic medium hair cross',
