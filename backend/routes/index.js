@@ -153,5 +153,6 @@ const findOne = function (db, name, callback) {
   console.log(result);
   callback(result);
 }
+router.use(bodyParser.text());
 
 module.exports = router;
