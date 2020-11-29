@@ -70,6 +70,7 @@ router.patch('/updateDocument', function petUpdate(request, response) {
 
 });
 
+//endpoint
 router.get('/findOne', function findPet(request, response) {
 
   client.connect(function (err) {
