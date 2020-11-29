@@ -175,7 +175,7 @@ const findOne = async function (db, name, callback) {
     var result = await collection.find(name).toArray();
     console.log(result);
     callback(result);
-    return result;
+    return true;
   } catch (err) {
     console.log(err);
     return false;
