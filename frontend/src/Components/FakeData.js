@@ -37,31 +37,31 @@ const FakeData = [
                 imgSrc: Knuckles,
             },
             {
-                name: 'Rocky',
+                name: 'Spot',
                 breed: 'American pit bull cross',
                 status: 'Neutered and vaccinated',
                 gender: 'Female',
                 yearsOld: 7,
                 adopted: false,
-                imgSrc: Rocky,
+                imgSrc: Knuckles,
             },
             {
-                name: 'Juju',
+                name: 'Sky',
                 breed: 'American staff cross',
                 status: 'Vaccindated, not neutered',
                 gender: 'Male',
                 yearsOld: 7,
                 adopted: false,
-                imgSrc: Juju,
+                imgSrc: Rocky,
             },
             {
-                name: "Knuckles II",
+                name: "Coffee",
                 breed: "Anatolian Shepherd",
                 status: 'Neutered and vaccinated',
                 gender: "Male",
                 yearsOld: 1,
                 adopted: false,
-                imgSrc: Knuckles,
+                imgSrc: Juju,
             },
             // {
             //     name: 'Max',
@@ -136,31 +136,31 @@ const FakeData = [
                 imgSrc: Kip
             },
             {
-                name: 'Terry',
+                name: 'Dean',
                 breed: 'Domestic medium hair cross',
                 status: 'Neutered, not vaccinated',
                 gender: 'Male',
                 yearsOld: 2,
                 adopted: false,
-                imgSrc: Terry
+                imgSrc: Kip
             },
             {
-                name: 'Chonker',
+                name: 'Winston',
                 breed: 'Main coone',
                 status: 'Status unknown',
                 gender: 'Female',
                 yearsOld: 5,
                 adopted: false,
-                imgSrc: Chonker
+                imgSrc: Terry
             },
             {
-                name: "Kip",
+                name: "Alfred",
                 breed: "Domestic shorthair",
                 status: "Neutered and vaccinated",
                 gender: 'Female',
                 yearsOld: 2,
                 adopted: false,
-                imgSrc: Kip
+                imgSrc: Chonker
             },
             // {
             //     name: 'Mochi',
