@@ -4,7 +4,7 @@ import {
   Link
 } from 'react-router-dom';
 // get our fontawesome imports
-import { faDog, faSyringe, faInfoCircle, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faDog, faSyringe, faInfoCircle, faArrowDown, faCat } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -18,7 +18,7 @@ const PetProfile = (pet) => {
         <div>
           
           <h2>{pet.name}</h2>
-          <p className="desc"><FontAwesomeIcon icon={faDog} /> {pet.breed}</p>
+          <p className="desc"><FontAwesomeIcon icon={( pet.type === 'dog') ? (faDog) : (faCat)} /> {pet.breed}</p>
           <p className="desc"><FontAwesomeIcon icon={faSyringe} /> {pet.status}</p>
           <p className="desc"><FontAwesomeIcon icon={faInfoCircle} /> {pet.gender}, {pet.yearsOld} years old</p>
           <Link id="moreDetails" to={"/" + pet.name + '-' + pet.type} style={{ textDecoration: 'none' }}>

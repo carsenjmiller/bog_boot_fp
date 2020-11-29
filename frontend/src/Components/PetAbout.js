@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import AdoptMe from './AdoptMe'
-import { faDog, faSyringe, faInfoCircle, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faDog, faSyringe, faInfoCircle, faArrowDown, faCat } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PetAbout = (petInfo) => {
@@ -13,7 +13,7 @@ const PetAbout = (petInfo) => {
                 <div className="petInfo">
                     <img src={petInfo.imgSrc} id="profileImage" alt={"Picture of " + petInfo.name}></img>
                     <div className="petInfoWords">
-                        <p><FontAwesomeIcon icon={faDog} /> {petInfo.breed}</p>
+                        <p><FontAwesomeIcon icon={( petInfo.type === 'dog') ? (faDog) : (faCat)} /> {petInfo.breed}</p>
                         <p><FontAwesomeIcon icon={faSyringe} /> {petInfo.status}</p>
                         <p><FontAwesomeIcon icon={faInfoCircle} /> {petInfo.gender}, {petInfo.yearsOld} years old</p>
                     </div>

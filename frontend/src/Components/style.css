@@ -48,6 +48,9 @@ nav button:active{
     color: white;
     font-weight: bold;
 }
+#navBTN{
+    font-size: 18px;
+}
 
 /* About */
 .about{
@@ -63,7 +66,7 @@ div .body {
     background-color:white;
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 1000px;
     /* width: 100%; */
     margin-top: 20px;
     /* margin-left: 250px; */
@@ -88,19 +91,25 @@ div .headerPhoto {
     width: 100%;
     height: auto;
 }
-
+div .body h2 {
+    font-size: 30px
+}
+div .body p {
+    font-size: 25px
+}
 
 
 /* PetProfile */
 .profile{
+    max-height: 460px;
     border-style: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-width: 1px;
     border-radius: 7px;
     margin: 2%;
     width: 270px;
-    height: 430px;
-    /* height: auto; */
+    /* height: 430px; */
+    height: auto;
     overflow: hidden;
  
 }
@@ -141,13 +150,15 @@ div .headerPhoto {
 
 /* PetProfileList */
 .petList{
+    /* min-height: fit-content; */
+    /* max-height: fit-content; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     width: 65%; 
     /* width: 83%; */
-    height: auto;
+    /* height: auto; */
     /* margin: 5%; */
     margin-top:7%;
 }
@@ -158,6 +169,7 @@ div .headerPhoto {
 }
 
 #Pets{
+    /* height: auto; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
