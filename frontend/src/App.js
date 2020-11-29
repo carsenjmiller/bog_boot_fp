@@ -22,7 +22,7 @@ import {
     const [currentPets, setCurrentPets] = React.useState(FakeData)
 
     React.useEffect(() => {
-      fetch('http://localhost:3001/pets')
+      fetch('mongodb://localhost:27017')
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => {
