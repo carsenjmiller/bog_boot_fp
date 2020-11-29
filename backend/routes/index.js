@@ -8,7 +8,7 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
 // Connection URL
-const url = 'mongodb://localhost:27017'; //TODO THIS COULD BE WRONG
+const url = 'mongodb://localhost:27017';
 
 // Database Name
 const dbName = 'petsInfo'; //TODO rename db
@@ -33,14 +33,14 @@ router.get('/findDocuments', function petFind(request, response) {
       return;
     }
 
-      const db = client.db(dbName);
+    const db = client.db(dbName);
 
-      var result = findDocuments(db, function () {
-          client.close();
-      });
+    var result = findDocuments(db, function () {
+      client.close();
+    });
 
-      response.status(200); //http status code
-      response.send(result); //http response
+    response.status(200); //http status code
+    response.send(result); //http response
   });
 
 });
@@ -56,16 +56,16 @@ router.patch('/updateDocument', function petUpdate(request, response) {
       return;
     }
 
-      const name = request.query.name; //query parameter
+    const name = request.query.name; //query parameter
 
-      const db = client.db(dbName);
+    const db = client.db(dbName);
 
-      var result = updateDocument(db, name, function () {
-          client.close();
-      });
+    var result = updateDocument(db, name, function () {
+      client.close();
+    });
 
-      response.status(200); //http status code
-      response.send(result); //http response
+    response.status(200); //http status code
+    response.send(result); //http response
   });
 
 });
@@ -78,16 +78,16 @@ router.get('/findOne', function findPet(request, response) {
       return;
     }
 
-      const name = request.query.name; //query parameter
+    const name = request.query.name; //query parameter
 
-      const db = client.db(dbName);
+    const db = client.db(dbName);
 
-      var result = findOne(db, name, function () {
-        client.close();
-      });
-      
-      response.status(200); //http status code
-      response.send(result); //http response
+    var result = findOne(db, name, function () {
+      client.close();
+    });
+
+    response.status(200); //http status code
+    response.send(result); //http response
   });
 });
 
@@ -118,12 +118,12 @@ const findDocuments = function (db, callback) {
   const collection = db.collection('pets');
   // Find some documents
   collection.find({}).toArray(function (err, docs) {
-      if (err) {
-        console.log(err);
-        return;
-      }
-      console.log(docs);
-      callback(docs);
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log(docs);
+    callback(docs);
   });
 }
 
@@ -133,23 +133,23 @@ const updateDocument = function (db, name, callback) {
   const collection = db.collection('pets');
   // Update document where a is 2, set b equal to 1
   collection.updateOne({ name: name }
-      , { $set: { adopted: true } }, function (err, result) {
-          // assert.equal(err, null);
-          // assert.equal(1, result.result.n);
-          if (err) {
-            console.log(err);
-            return;
-          }
-          console.log("adopted is true");
-          console.log(result);
-          callback(result);
-      });
+    , { $set: { adopted: true } }, function (err, result) {
+      // assert.equal(err, null);
+      // assert.equal(1, result.result.n);
+      if (err) {
+        console.log(err);
+        return;
+      }
+      console.log("adopted is true");
+      console.log(result);
+      callback(result);
+    });
 }
 
 const findOne = function (db, name, callback) {
   const collection = db.collection('pets');
 
-  var result = collection.findOne({"name": name});
+  var result = collection.findOne({ "name": name });
   console.log(result);
   callback(result);
 }
