@@ -87,6 +87,7 @@ import {
       <PetAbout
         typeIndex={type}
         petIndex={pet}
+        imgSrc={props.currentPets[type].pets[pet].imgSrc}
         type={props.currentPets[type]._id}
         name={props.currentPets[type].pets[pet].name}
         breed={props.currentPets[type].pets[pet].breed}

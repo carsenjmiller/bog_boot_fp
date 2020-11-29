@@ -11,7 +11,7 @@ const PetAbout = (petInfo) => {
             <div className="bodyPet">
                 <h1>{petInfo.name}</h1>
                 <div className="petInfo">
-                    <img src="https://picsum.photos/350/200" id="profileImage" alt={"Picture of " + petInfo.name}></img>
+                    <img src={petInfo.imgSrc} id="profileImage" alt={"Picture of " + petInfo.name}></img>
                     <div className="petInfoWords">
                         <p><FontAwesomeIcon icon={faDog} /> {petInfo.breed}</p>
                         <p><FontAwesomeIcon icon={faSyringe} /> {petInfo.status}</p>

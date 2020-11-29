@@ -14,6 +14,7 @@ const PetProfileList = (type) => {
             yearsOld={pet.yearsOld}
             adopted={pet.adopted}
             type={type.species._id}
+            imgSrc={pet.imgSrc}
         />
     )
     // console.log(type.contents._id);
