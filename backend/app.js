@@ -23,6 +23,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/findDocuments', indexRouter);
+app.use('/updateDocument', indexRouter);
+app.use('/findOne', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
