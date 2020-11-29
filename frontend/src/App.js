@@ -22,7 +22,7 @@ import {
     const [currentPets, setCurrentPets] = React.useState(FakeData)
 
     React.useEffect(() => {
-      fetch('http://localhost:3001/pets')
+      fetch('http://localhost:3001/findDocuments')
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => {
@@ -87,6 +87,7 @@ import {
       <PetAbout
         typeIndex={type}
         petIndex={pet}
+        imgSrc={props.currentPets[type].pets[pet].imgSrc}
         type={props.currentPets[type]._id}
         name={props.currentPets[type].pets[pet].name}
         breed={props.currentPets[type].pets[pet].breed}
