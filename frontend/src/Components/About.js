@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className="about">
             <div className='headerPhoto'>
-                <img src={"https://picsum.photos/970/250"} ></img>
+                <img src={"https://picsum.photos/970/250"} alt="header"></img>
             </div>
             <div className="body">
                 {/* <div class='headerPhoto'>

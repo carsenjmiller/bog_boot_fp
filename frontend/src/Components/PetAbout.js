@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import AdoptMe from './AdoptMe'
-import { faDog, faSyringe, faInfoCircle, faArrowDown, faCat } from "@fortawesome/free-solid-svg-icons";
+import { faDog, faSyringe, faInfoCircle, faCat } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PetAbout = (petInfo) => {
