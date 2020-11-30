@@ -19,31 +19,28 @@ const PetAbout = (petInfo) => {
                     </div>
                 </div>
                 <div>
-                    <h1>Ut proverbia non nulla veriora sint quam vestra dogmata.</h1>
+                    {/* <h1>Ut proverbia non nulla veriora sint quam vestra dogmata.</h1> */}
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vide, quantum, inquam, fallare, Torquate. Duo Reges: constructio interrete. Iam in altera philosophiae parte. Hic ambiguo ludimur. </p>
+                    <p>Jasmine is a sweet, delicate blended kitty, part Lynx Point Siamese and part domestic short hair. True to the Siamese side of her breed, she is very vocal.
+                        Her coast has lots of interesting colors and she had haunting clue ryes. When she first coame to QAS, she was nervous and frightnened because, at some point
+                        in her 2 years, she had become a stray.
+                    </p>
 
-                    <p>Et quidem, inquit, vehementer errat; Erit enim mecum, si tecum erit. Hanc quoque iucunditatem, si vis, transfer in animum; </p>
+                    <p>It was quickly dscovered that her back left leg had been broken in two places and was nto healing well. As a result, that leg had to be amputated. She has made
+                        a full recovery in a loving foster home. Her foster mom says she has become more active. She greets her in the kitchen when she gets home, She us moving around
+                        the house easily. She can go up and down the stairs, jump on the couch, and jump on the bed. She also likes to explore and seems to have no fear of the house.
+                    </p>
 
-                    <p>Negat enim summo bono afferre incrementum diem. Praeclare hoc quidem. Ille incendat? Frater et T. </p>
+                    <p>She was introduced to a dog and did not seem scared at all. THey actually went nose to nose for a quick sniff. </p>
 
-                    <p>Memini me adesse P. Idem iste, inquam, de voluptate quid sentit? Istam voluptatem, inquit, Epicurus ignorat? Nonne igitur tibi videntur, inquit, mala? Tibi hoc incredibile, quod beatissimum. </p>
+                    <p>She loves to be patted aggresively. When shs rubs against you to be patted it is really more like she slams into you. She will climb on your lap, and occasionally
+                        on your chest to be petted. She still startles simetimes, when approached, but will usually come back immediately for petting.
+                    </p>
 
-                    <p>Age, inquies, ista parva sunt. Quid sequatur, quid repugnet, vident. Nihil sane. Tollenda est atque extrahenda radicitus. Primum quid tu dicis breve? Atqui reperies, inquit, in hoc quidem pertinacem; </p>
-
-                    <p>Ea possunt paria non esse. At, si voluptas esset bonum, desideraret. Erat enim res aperta. Quod cum dixissent, ille contra. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Omnis enim est natura diligens sui. </p>
-
-                    <p>Nihil enim hoc differt. An vero, inquit, quisquam potest probare, quod perceptfum, quod. Illud dico, ea, quae dicat, praeclare inter se cohaerere. Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. </p>
-
-                    <p>Id est enim, de quo quaerimus. Quae cum dixisset paulumque institisset, Quid est? Cur deinde Metrodori liberos commendas? Nescio quo modo praetervolavit oratio. Et quod est munus, quod opus sapientiae? Ad eos igitur converte te, quaeso. Haeret in salebra. Sint modo partes vitae beatae. </p>
-
-                    <h2>Quid turpius quam sapientis vitam ex insipientium sermone pendere?</h2>
-
-                    <p>Confecta res esset. Qui ita affectus, beatum esse numquam probabis; Praeclare hoc quidem. Sedulo, inquam, faciam. </p>
-
-                    <h3>Id est enim, de quo quaerimus.</h3>
-
-                    <p>Certe, nisi voluptatem tanti aestimaretis. Quid ergo attinet gloriose loqui, nisi constanter loquare? Tollenda est atque extrahenda radicitus. Prioris generis est docilitas, memoria; Summae mihi videtur inscitiae. </p>
+                    <p>She appears to be a cat that needs a  lot of attention, It would be especially good for her if someone with Siamese breed experience
+                        were to adopt her, someone who understands the specia; personality traits of a Siamese cat. The breed is highly intelligent but can have a mind of their own. They are
+                        affecionate and most of them love to play. She has not, so far, been interested in toys but this may come now that she is healthy.
+                    </p> 
                 </div>
                 <AdoptMe name={petInfo.name} petInfo={petInfo} currentPets={petInfo.currentPets} updateAdoption={petInfo.updateAdoption} adoptMeBTN={adoptMeBTN} setAdoptMeBTN={setAdoptMeBTN}/>
             </div>
