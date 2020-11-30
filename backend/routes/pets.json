@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "_id": 0,
         "name": "Rocky",
         "breed": "American pit bull cross",
         "status": "Neutered and vaccinated",
@@ -11,7 +11,7 @@
         "imgSrc": "backend/petImgs/Rocky.jpg"
     },
     {
-        "id": 1,
+        "_id": 1,
         "name": "Juju",
         "breed": "American staff cross",
         "status": "Vaccinated, not neutered",
@@ -22,7 +22,7 @@
         "imgSrc": "backend/petImgs/Juju.jpg"
     },
     {
-        "id": 2,
+        "_id": 2,
         "name": "Knuckles II",
         "breed": "Anatolian Shepherd",
         "status": "Neutered and vaccinated",
@@ -33,7 +33,7 @@
         "imgSrc": "backend/petImgs/Knuckles.jpg"
     },
     {
-        "id": 3,
+        "_id": 3,
         "name": "Terry",
         "breed": "Domestic medium hair cross",
         "status": "Neutered, not vaccinated",
@@ -44,7 +44,7 @@
         "imgSrc": "backend/petImgs/Terry.jpg"
     },
     {
-        "id": 4,
+        "_id": 4,
         "name": "Chonker",
         "breed": "Main coone",
         "status": "Status unknown",
@@ -55,7 +55,7 @@
         "imgSrc": "backend/petImgs/Chonker.jpg"
     },
     {
-        "id": 5,
+        "_id": 5,
         "name": "Kip",
         "breed": "Domestic shorthair",
         "status": "Neutered and vaccinated",
