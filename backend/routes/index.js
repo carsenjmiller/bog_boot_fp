@@ -57,6 +57,43 @@ router.get('/findDocuments', async function (request, response) {
     }
 });
 
+router.patch('/:petName', async function (request, response) {
+  try {
+    const updatedPet = await Pets.updateOne(
+      {name: request.params.petName}, {$set: {adopted: true}}
+    );
+    response.json(updatedPet);
+  } catch (err) {
+    res.json({message: err});
+  }
+})
+
+// const updateDocument = async function (db, name, callback) {
+//   try {
+//     // Get the documents collection
+//     const collection = db.collection('pets');
+//     // Update document where a is 2, set b equal to 1
+//     const results = await collection.updateOne(name
+//        , { $set: {adopted: true}}, function (err, result) {
+//         // assert.equal(err, null);
+//         // assert.equal(1, result.result.n);
+//         if (err) {
+//           console.log(err);
+//           return;
+//         }
+//         console.log("adopted is true");
+//         console.log(result);
+//         callback(result);
+//       });
+//     return true;
+//   } catch (err) {
+//     console.log(err);
+//     return false;
+//   }
+  
+// }
+
+
 // function
 // async function group(client) {
 //     var cllxn = client.db('petsInfo').collection('petsCollection');
