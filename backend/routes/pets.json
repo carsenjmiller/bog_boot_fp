@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "_id": 0,
         "name": "Rocky",
         "breed": "American pit bull cross",
         "status": "Neutered and vaccinated",
@@ -8,32 +8,32 @@
         "yearsOld": 7,
         "adopted": false,
         "species": "dog",
-        "imgSrc": "backend/petImgs/Rocky.jpg"
+        "imgSrc": "https://i.imgur.com/MU2dD8E.jpeg"
     },
     {
-        "id": 1,
+        "_id": 1,
         "name": "Juju",
         "breed": "American staff cross",
         "status": "Vaccinated, not neutered",
         "gender": "Male",
         "yearsOld": 7,
-        "adopted": true,
+        "adopted": false,
         "species": "dog",
-        "imgSrc": "backend/petImgs/Juju.jpg"
+        "imgSrc": "https://i.imgur.com/RpikbHf.jpeg"
     },
     {
-        "id": 2,
-        "name": "Knuckles II",
+        "_id": 2,
+        "name": "Knuckles",
         "breed": "Anatolian Shepherd",
         "status": "Neutered and vaccinated",
         "gender": "Male",
         "yearsOld": 1,
         "adopted": false,
         "species": "dog",
-        "imgSrc": "backend/petImgs/Knuckles.jpg"
+        "imgSrc": "https://i.imgur.com/BCceSvW.jpeg"
     },
     {
-        "id": 3,
+        "_id": 3,
         "name": "Terry",
         "breed": "Domestic medium hair cross",
         "status": "Neutered, not vaccinated",
@@ -41,21 +41,21 @@
         "yearsOld": 2,
         "adopted": false,
         "species": "cat",
-        "imgSrc": "backend/petImgs/Terry.jpg"
+        "imgSrc": "https://i.imgur.com/Jvh1OQm.jpeg"
     },
     {
-        "id": 4,
+        "_id": 4,
         "name": "Chonker",
         "breed": "Main coone",
         "status": "Status unknown",
         "gender": "Female",
         "yearsOld": 5,
-        "adopted": true,
+        "adopted": false,
         "species": "cat",
-        "imgSrc": "backend/petImgs/Chonker.jpg"
+        "imgSrc": "https://i.imgur.com/ozEaj1Z.png"
     },
     {
-        "id": 5,
+        "_id": 5,
         "name": "Kip",
         "breed": "Domestic shorthair",
         "status": "Neutered and vaccinated",
@@ -63,6 +63,6 @@
         "yearsOld": 2,
         "adopted": false,
         "species": "cat",
-        "imgSrc": "backend/petImgs/Kip.jpg"
+        "imgSrc": "https://i.imgur.com/AD3MbBi.jpeg"
     }
 ]

@@ -1,187 +1,81 @@
-var { response } = require('express');
 var express = require('express');
 var router = express.Router();
-const bodyParser = require('body-parser');
-var app = express();
+const Pets = require('../model/pet');
 
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
+var mongoose = require('mongoose');
+const { request } = require('../app');
+mongoose.connect("mongodb+srv://Deepsikha:Deep2018@cluster0.yqbhm.mongodb.net/Pets?retryWrites=true&w=majority", () => console.log("connected"));
 
-// Connection URL
-const url = 'mongodb://localhost:27017';
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-// Database Name
-const dbName = 'petsInfo'; //TODO rename db
-
-// Create a new MongoClient
-const client = new MongoClient(url);
-
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-
-// endpoint
-router.get('/findDocuments', async function petFind(request, response) {
-  const name = request.query.name; //query parameter
-
-  // Use connect method to connect to the Server
-  client.connect(async function (err) {
-    if (err) {
-      console.log(err);
-      return;
+router.post('/addPet', async (req, res) => {
+    const pet = new Pets({
+        _id: req.body._id,
+        name: req.body.name,
+        breed: req.body.breed,
+        status: req.body.status,
+        gender: req.body.gender,
+        yearsOld: req.body.yearsOld,
+        adopted: req.body.adopted,
+        species: req.body.species,
+        imgSrc: req.body.imgSrc
+    });
+    try {
+        const savedPet = await pet.save();
+        res.json(savedPet);
+    } catch (err) {
+        res.json({message: err});
     }
-
-    const db = client.db(dbName);
-
-    var result = await findDocuments(db, function () {
-      client.close();
-    });
-
-    response.status(200); //http status code
-    response.send(result); //http response
-  });
-
 });
 
+router.get('/findDocuments', async function (request, response) {
+    try {
+        // const pets = await Pets.find();
+        // console.log(pets);
+        // response.send(pets);
 
-// endpoint
-router.patch('/updateDocument', async function petUpdate(request, response) {
-
-  // Use connect method to connect to the Server
-  client.connect(async function (err) {
-    if (err) {
-      console.log(err);
-      return;
+        const petsGroup = await Pets.aggregate(
+                  [
+                    {
+                      $group:
+                      {
+                        _id: '$species',
+                        pets: {
+                          $push: {
+                            id: '$id', name: '$name', breed: '$breed', status:
+                              '$status', gender: '$gender', yearsOld: '$yearsOld', adopted: '$adopted', imgSrc: '$imgSrc'
+                          }
+                        }
+                      }
+                    }
+                  ]);
+                  console.log(petsGroup);
+                  response.send(petsGroup);
+    } catch {
+        response.send("error");
     }
-
-    const name = request.query; //query parameter
-
-    const db = client.db(dbName);
-
-    var result = await updateDocument(db, name, function () {
-      client.close();
-    });
-
-    response.status(200); //http status code
-    response.send(result); //http response
-  });
-
 });
 
-router.get('/findOne', async function findPet(request, response) {
-
-  client.connect(async function (err) {
-    if (err) {
-      console.log(err);
-      return;
-    }
-
-    const name = request.query; //query parameter
-
-    const db = client.db(dbName);
-
-    var result = await findOne(db, name, function () {
-      client.close();
-    });
-
-    response.status(200); //http status code
-    response.send(result); //http response
-  });
-});
-
-// function
-async function group(client) {
-  var cllxn = client.db('petsInfo').collection('petsCollection');
-  return await cllxn.aggregate(
-    [
-      {
-        $group:
-        {
-          _id: { $species: '$species' },
-          pets: {
-            $push: {
-              id: '$id', name: '$name', breed: '$breed', status:
-                '$status', gender: '$gender', yearsOld: '$yearsOld', adopted: '$adopted', imgSrc: '$imgSrc'
-            }
-          }
-        }
-      }
-    ]
-  )
-}
-
-// function
-const findDocuments = async function (db, callback) {
+router.patch('/:petName', async function (request, response) {
   try {
-    // Get the documents collection
-    const collection = db.collection('pets');
-    // Find some documents
-    const results = await collection.find({}).toArray(function (err, docs) {
-      if (err) {
-        console.log(err);
-        return;
-      }
-      console.log(docs);
-      callback(docs);
-    });
-    return results;
+    const updatedPet = await Pets.updateOne(
+      {name: request.params.petName}, {$set: {adopted: true}}
+    );
+    response.json(updatedPet);
   } catch (err) {
-    console.log(err);
-    return false;
+    response.json({message: err});
   }
-}
+})
 
-// function
-const updateDocument = async function (db, name, callback) {
+router.delete('/:petName', async function (request, response) {
   try {
-    // Get the documents collection
-    const collection = db.collection('pets');
-    // Update document where a is 2, set b equal to 1
-    const results = await collection.updateOne(name
-       , { $set: {adopted: true}}, function (err, result) {
-        // assert.equal(err, null);
-        // assert.equal(1, result.result.n);
-        if (err) {
-          console.log(err);
-          return;
-        }
-        console.log("adopted is true");
-        console.log(result);
-        callback(result);
-      });
-    return true;
+    const removedPet = await Pets.remove({name: request.params.petName});
+    response.json(removedPet);
   } catch (err) {
-    console.log(err);
-    return false;
+    response.json({message: err});
   }
-  
-}
-
-// const findOne = async function (db, name, callback) {
-//       const collection = db.collection('pets');
-
-//       var result = await collection.findOne({name}).toArray();
-//       console.log(result);
-//       callback(result);
-//       return true;
-// }
-
-const findOne = async function (db, name, callback) {
-  try {
-    const collection = db.collection('pets');
-
-    var result = await collection.find(name).toArray();
-    console.log(result);
-    callback(result);
-    return true;
-  } catch (err) {
-    console.log(err);
-    return false;
-  }
-}
-//router.use(bodyParser.text());
+})
 
 module.exports = router;
 

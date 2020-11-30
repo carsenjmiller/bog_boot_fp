@@ -45,7 +45,7 @@ const PetAbout = (petInfo) => {
 
                     <p>Certe, nisi voluptatem tanti aestimaretis. Quid ergo attinet gloriose loqui, nisi constanter loquare? Tollenda est atque extrahenda radicitus. Prioris generis est docilitas, memoria; Summae mihi videtur inscitiae. </p>
                 </div>
-                <AdoptMe petInfo={petInfo} currentPets={petInfo.currentPets} updateAdoption={petInfo.updateAdoption} adoptMeBTN={adoptMeBTN} setAdoptMeBTN={setAdoptMeBTN}/>
+                <AdoptMe name={petInfo.name} petInfo={petInfo} currentPets={petInfo.currentPets} updateAdoption={petInfo.updateAdoption} adoptMeBTN={adoptMeBTN} setAdoptMeBTN={setAdoptMeBTN}/>
             </div>
         </div>
     )
