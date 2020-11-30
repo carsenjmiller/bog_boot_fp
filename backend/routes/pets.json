@@ -8,7 +8,7 @@
         "yearsOld": 7,
         "adopted": false,
         "species": "dog",
-        "imgSrc": "backend/petImgs/Rocky.jpg"
+        "imgSrc": "https://i.imgur.com/MU2dD8E.jpeg"
     },
     {
         "_id": 1,
@@ -17,20 +17,20 @@
         "status": "Vaccinated, not neutered",
         "gender": "Male",
         "yearsOld": 7,
-        "adopted": true,
+        "adopted": false,
         "species": "dog",
-        "imgSrc": "backend/petImgs/Juju.jpg"
+        "imgSrc": "https://i.imgur.com/RpikbHf.jpeg"
     },
     {
         "_id": 2,
-        "name": "Knuckles II",
+        "name": "Knuckles",
         "breed": "Anatolian Shepherd",
         "status": "Neutered and vaccinated",
         "gender": "Male",
         "yearsOld": 1,
         "adopted": false,
         "species": "dog",
-        "imgSrc": "backend/petImgs/Knuckles.jpg"
+        "imgSrc": "https://i.imgur.com/BCceSvW.jpeg"
     },
     {
         "_id": 3,
@@ -41,7 +41,7 @@
         "yearsOld": 2,
         "adopted": false,
         "species": "cat",
-        "imgSrc": "backend/petImgs/Terry.jpg"
+        "imgSrc": "https://i.imgur.com/Jvh1OQm.jpeg"
     },
     {
         "_id": 4,
@@ -50,9 +50,9 @@
         "status": "Status unknown",
         "gender": "Female",
         "yearsOld": 5,
-        "adopted": true,
+        "adopted": false,
         "species": "cat",
-        "imgSrc": "backend/petImgs/Chonker.jpg"
+        "imgSrc": "https://i.imgur.com/ozEaj1Z.png"
     },
     {
         "_id": 5,
@@ -63,6 +63,6 @@
         "yearsOld": 2,
         "adopted": false,
         "species": "cat",
-        "imgSrc": "backend/petImgs/Kip.jpg"
+        "imgSrc": "https://i.imgur.com/AD3MbBi.jpeg"
     }
 ]
