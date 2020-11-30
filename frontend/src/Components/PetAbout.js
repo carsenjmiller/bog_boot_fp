@@ -21,7 +21,7 @@ const PetAbout = (petInfo) => {
                 <div>
                     {/* <h1>Ut proverbia non nulla veriora sint quam vestra dogmata.</h1> */}
 
-                    <p>Jasmine is a sweet, delicate blended kitty, part Lynx Point Siamese and part domestic short hair. True to the Siamese side of her breed, she is very vocal.
+                    <p>{petInfo.name} is a sweet, delicate blended kitty, part Lynx Point Siamese and part domestic short hair. True to the Siamese side of her breed, she is very vocal.
                         Her coast has lots of interesting colors and she had haunting clue ryes. When she first coame to QAS, she was nervous and frightnened because, at some point
                         in her 2 years, she had become a stray.
                     </p>
